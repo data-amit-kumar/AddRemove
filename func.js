@@ -15,7 +15,11 @@ function addItem(e){
 
     var li= document.createElement('li');
     li.className= 'list-group-item';
-    li.appendChild(document.createTextNode(newItem));
+    
+
+    var des=document.querySelector('#itemdes').value;
+    var textNode = document.createTextNode(newItem + ' - ' + des);
+    li.appendChild(textNode);
 
     var del= document.createElement('button');
     del.className = 'btn btn-danger btn-sm float-right delete';
